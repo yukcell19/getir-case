@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>GetirCase - Test</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Başlık ve logo bölümü -->
+        <div id="form-title">
+            <img src="/Frontend/img/logo_getirarac.svg" alt="Getir Araç Logo">
+            <span class="main-title">API Test Arayüzü</span>
+        </div>
+        <!-- Sarı vurgu çizgisi -->
+        <div class="yellow-line"></div>
+        
+        <div class="row">
+            <!-- MongoDB Kayıt Filtreleme Kutusu -->
+            <div class="box mongo-box">
+                <h2>MongoDB Kayıtlarını Filtrele</h2>
+                <form id="mongo-form">
+                    <label for="startDate">Başlangıç Tarihi (YYYY-MM-DD):</label>
+                    <input type="date" id="startDate" name="startDate" required>
+
+                    <label for="endDate">Bitiş Tarihi (YYYY-MM-DD):</label>
+                    <input type="date" id="endDate" name="endDate" required>
+
+                    <label for="minCount">Minimum Count:</label>
+                    <input type="number" id="minCount" name="minCount" required>
+
+                    <label for="maxCount">Maksimum Count:</label>
+                    <input type="number" id="maxCount" name="maxCount" required>
+
+                    <button type="submit">Filtrele</button>
+                </form>
+                <div id="mongo-output"></div>
+            </div>
+
+            <!-- In-Memory Key-Value Kutusu -->
+            <div class="box inmemory-box">
+                <div class="sub-box">
+                    <h2>In-Memory Anahtar-Değer Ekle (POST)</h2>
+                    <form id="inmemory-post-form">
+                        <label for="inmemory-key">Anahtar (key):</label>
+                        <input type="text" id="inmemory-key" name="key" required>
+
+                        <label for="inmemory-value">Değer (value):</label>
+                        <input type="text" id="inmemory-value" name="value" required>
+
+                        <button type="submit">Ekle</button>
+                    </form>
+                    <div id="inmemory-post-output"></div>
+                </div>
+                <div class="sub-box">
+                    <h2>In-Memory Anahtar Ara (GET)</h2>
+                    <form id="inmemory-get-form">
+                        <label for="inmemory-get-key">Anahtar (key):</label>
+                        <input type="text" id="inmemory-get-key" name="key" required>
+
+                        <button type="submit">Ara</button>
+                    </form>
+                    <div id="inmemory-get-output"></div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
