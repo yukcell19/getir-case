@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mongoOutput.textContent = "Yükleniyor..."; // Kullanıcıya bilgi veriyoruz.
 
             // Backend'e POST isteği atıyoruz.
-            const response = await fetch("http://localhost:8080/mongo-records", {
+            const response = await fetch("https://getir-case-enes-674776c8c0ea.herokuapp.com/mongo-records", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             inmemoryPostOutput.textContent = "Ekleniyor..."; // Kullanıcıya durum bildiriyoruz.
 
             // POST isteği ile backend'e ekleme yapıyoruz.
-            const response = await fetch("http://localhost:8080/in-memory", {
+            const response = await fetch("https://getir-case-enes-674776c8c0ea.herokuapp.com/in-memory", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // GET isteği ile girilen anahtarı backend'e gönderiyoruz.
             // encodeURIComponent ile güvenli bir şekilde URL'ye ekliyoruz.
-            const response = await fetch(`http://localhost:8080/in-memory?key=${encodeURIComponent(key)}`);
+            const response = await fetch(`https://getir-case-enes-674776c8c0ea.herokuapp.com/in-memory?key=${encodeURIComponent(key)}`);
 
             // Eğer cevap başarılı değilse, hatayı ekrana basıyoruz.
             if (!response.ok) {
