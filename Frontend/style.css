@@ -1,3 +1,4 @@
+/* Arka plan ve genel yazı tipi ayarları */
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -10,6 +11,7 @@ body {
     margin: 0;
 }
 
+/* Ana kutu (container) stilleri */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -19,25 +21,8 @@ body {
     padding: 36px 32px 32px 32px;
 }
 
-h1 {
-   font-size: 2.2em;
-    margin-bottom: 18px;
-    color: white;
-    font-weight: bold;
-    position: relative;
-}
-
-h1:after {
-    content: "";
-    display: block;
-    margin: 10px auto 0;
-    width: 72px;
-    height: 4px;
-    background: #ffd300;
-    border-radius: 3px;
-}
-
-#form-title{
+/* Form başlığı ve logo alanı */
+#form-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,12 +34,15 @@ h1:after {
     height: 44px;
     margin-right: 12px;
 }
+
 .main-title {
     font-size: 2.2em;
     font-weight: bold;
     color: #fff;
     line-height: 1;
 }
+
+/* Sarı vurgu çizgisi */
 .yellow-line {
     height: 5px;
     width: 85px;
@@ -63,6 +51,7 @@ h1:after {
     margin: 10px auto 30px auto;
 }
 
+/* Başlıklar (form içi) */
 h2 {
     color: #222;
     font-size: 1.3em;
@@ -70,11 +59,13 @@ h2 {
     margin-bottom: 14px;
 }
 
+/* Kutuların sıralanması */
 .row {
     display: flex;
     gap: 38px;
 }
 
+/* Ortak kutu (box) stilleri */
 .box {
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
@@ -85,6 +76,7 @@ h2 {
     min-width: 300px;
 }
 
+/* Mongo kutusu */
 .mongo-box {
     border-radius: 10px;
     padding: 22px 18px 18px 18px;
@@ -92,6 +84,7 @@ h2 {
     max-width: 350px;
 }
 
+/* In-memory kutusu */
 .inmemory-box {
     display: flex;
     flex-direction: column;
@@ -99,6 +92,7 @@ h2 {
     max-width: 370px;
 }
 
+/* In-memory alt kutu */
 .sub-box {
     background: #e0d7f5;
     border-radius: 10px;
@@ -107,10 +101,12 @@ h2 {
     margin-bottom: 0px;
 }
 
+/* Tüm kutular için arka plan */
 .box, .mongo-box, .inmemory-box {
     background: #f3eeff;
 }
 
+/* Mobil uyum için responsive ayar */
 @media (max-width: 900px) {
     .row {
         flex-direction: column;
@@ -123,16 +119,19 @@ h2 {
     }
 }
 
+/* Form içi ayarlar */
 form {
     margin-bottom: 32px;
 }
 
+/* Etiketler */
 label {
     display: block;
     margin-top: 10px;
     font-weight: 500;
 }
 
+/* Input kutuları (tüm tipler) */
 input[type="date"],
 input[type="number"],
 input[type="text"] {
@@ -149,6 +148,7 @@ input[type="text"] {
     transition: border-color .2s;
 }
 
+/* Input focus efekti */
 input[type="date"]:focus,
 input[type="number"]:focus,
 input[type="text"]:focus {
@@ -156,6 +156,7 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 2px #ffd30030;
 }
 
+/* Submit butonu */
 button[type="submit"] {
     margin-top: 14px;
     background: #643ad4;
@@ -172,10 +173,11 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-   background: #ffd300;
+    background: #ffd300;
     color: #643ad4;
 }
 
+/* Sonuç kutuları */
 #mongo-output,
 #inmemory-post-output,
 #inmemory-get-output {
